@@ -23,7 +23,6 @@ jobs:
       run: |
         pip install .
         VERSION=$(python -c 'from gpseer.__version__ import __version__; print("v" + __version__)')
-    - name: Tag
     - name: Publish distribution 📦 to PyPI
       env:
         TWINE_USERNAME: __token__
@@ -31,7 +30,7 @@ jobs:
       run: |
         python setup.py sdist bdist_wheel
         twine upload dist/*
-    - name: Release on Github.
+    - name: Tag this version
       run: |
         git tag VERSION
     - name: Push tags
