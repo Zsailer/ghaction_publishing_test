@@ -22,7 +22,7 @@ jobs:
     - name: Verify that the package installs from source.
       run: |
         pip install .
-        VERSION=$(python -c 'from gpseer.__version__ import __version__; print("v" + __version__)')
+        VERSION=$(python -c 'from ghactions_publishing_test.__version__ import __version__; print("v" + __version__)')
     - name: Publish distribution 📦 to PyPI
       env:
         TWINE_USERNAME: __token__
