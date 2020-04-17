@@ -55,9 +55,6 @@ else:
     about['__version__'] = VERSION
 
 
-
-
-
 # Where the magic happens:
 setup(
     name=NAME,
@@ -83,9 +80,5 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
-    ],
-    # $ setup.py publish support.
-    cmdclass={
-        'publish-gh-action': PublishGithubAction,
-    },
+    ]
 )
