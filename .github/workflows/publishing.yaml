@@ -32,7 +32,7 @@ jobs:
         twine upload dist/*
     - name: Tag this version
       run: |
-        git tag VERSION
+        git tag $VERSION
     - name: Push tags
       uses: ad-m/github-push-action@master
       with:
